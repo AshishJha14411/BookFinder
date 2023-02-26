@@ -14,8 +14,9 @@ export const BookListProvider = (props:any) => {/*
     const [search, setSearch] = useState<boolean>(false)
 
     const calldata = async () => {
+        const apiKey: string | undefined = process.env.REACT_APP_API_KEY
         const response = await axios.get(
-          `https://www.googleapis.com/books/v1/volumes?q={${query}&AIzaSyBoUamR5S_9smf5E8OgNsX9GH3e0sRl8PQ}`
+          `https://www.googleapis.com/books/v1/volumes?q={${query}&${apiKey}}`
         );
         setBookList(response.data.items);
         /* setBookId("") */
