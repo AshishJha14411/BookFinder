@@ -35,7 +35,7 @@ const BookCard = () => {
                             <img className="w-full rounded-t-lg h-[15%] md:h-[75%] md:w-[60%] md:rounded-none md:rounded-l-lg" src={item.volumeInfo?.imageLinks?.thumbnail} alt="" />
                             <div className="flex flex-col justify-between p-4 leading-normal">
                                 <h3 className="mb-2 text-2xl font-bold tracking-tight text-[#A45C40]">{item.volumeInfo.title}</h3>
-                                <h5 className="mb-2 text-md font-bold tracking-tight text-[#A45C40]">{item.volumeInfo.authors}</h5>
+                                <h5 className="mb-2 /*  */text-md font-bold tracking-tight text-[#A45C40]">{item.volumeInfo.authors}</h5>
                             </div>
                         </div>
                     )
