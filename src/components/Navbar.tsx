@@ -12,11 +12,11 @@ const Navbar = () => {
  
     /* Reseting Everything on Home Click and Init an empty Search */
     const handleReset = () => {
+        setQuery("")
         setBookId("")
         setBookList([])
         setSearch(true)
         setShowHome(true)
-       
     }
     /* Go back to Searched BookList */
     const handleIDReset = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
                     <input
                         className='w-[70%] h-[3rem] outline-none p-4'
                         placeholder="Enter the Book you want to search for"
-                       
+                        value={query}
                         onChange={e => {
                             setQuery(e.target.value)
                         }}

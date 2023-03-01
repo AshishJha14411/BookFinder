@@ -26,8 +26,6 @@ export const BookListProvider = (props:any) => {
       /* post get req if "Search" is true and reseting search and query */
       if(search){
         calldata()
-        console.log(bookList)
-        setQuery("")
         setSearch(false)
       }
       /* Initial One time run */
