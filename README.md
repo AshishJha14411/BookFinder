@@ -16,8 +16,13 @@ A Searching App, which searches the name of the book using Google's bookapi and 
 
 You will have to add your key to the .env.local file and run the project for it to work.
 In the project directory, you can run:
+### `npm install`
 
+to install the dependencies
+
+You will also have to install and configure the Tailwind CSS 
 ### `npm start` 
+
 to start the app
 
 ### `npm run-script build`
