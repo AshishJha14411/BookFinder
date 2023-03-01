@@ -9,24 +9,20 @@ const Navbar = () => {
     const { setSearch, setQuery, query, setBookList, setShowHome } = useContext(BookList) as BookContext
     /* Importing states  from BookPage Context*/
     const { setBookId } = useContext(BookPageContext) as BookPageType
-    /* Setting the search query to  */
-    const handleChange = (e: { target: { value: string; }; }) => {
-        let rawText = e.target.value;
-        if (rawText) {
-            setQuery(rawText)
-        }
-    }
+ 
     /* Reseting Everything on Home Click and Init an empty Search */
     const handleReset = () => {
         setBookId("")
         setBookList([])
         setSearch(true)
         setShowHome(true)
+       
     }
     /* Go back to Searched BookList */
     const handleIDReset = () => {
         setBookId("")
     }
+ 
     return (
         <div className='p-8 bg-[#C38370]'>
             <nav className='flex flex-row justify-between'>
@@ -37,8 +33,10 @@ const Navbar = () => {
                     <input
                         className='w-[70%] h-[3rem] outline-none p-4'
                         placeholder="Enter the Book you want to search for"
-                        value={query}
-                        onChange={handleChange}
+                       
+                        onChange={e => {
+                            setQuery(e.target.value)
+                        }}
                     />
                     <button onClick={() => {
                         setSearch(true)

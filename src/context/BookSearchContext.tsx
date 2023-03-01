@@ -27,8 +27,8 @@ export const BookListProvider = (props:any) => {
       if(search){
         calldata()
         console.log(bookList)
-        setSearch(false)
         setQuery("")
+        setSearch(false)
       }
       /* Initial One time run */
       useEffect(() => {

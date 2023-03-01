@@ -11,7 +11,7 @@ const BookPage = () => {
         return (
           <div key={item.id}>
             <div className='flex flex-row justify-start p-8'>
-              <img src={item.volumeInfo.imageLinks?.thumbnail} alt="Book Image" className='w-[18rem] h-[20rem] my-auto' />
+              <img src={item.volumeInfo.imageLinks?.thumbnail} alt="Book Image" className='w-[15rem] h-[20rem] my-auto' />
               <div className='p-6'>
                 <p className='text-2xl pb-3 font-bold'>Title: <span className='font-semibold text-xl'>{item.volumeInfo.title}</span></p>
                 <p className='text-2xl pb-3 font-bold'>SubTitle: <span className='text-xl font-semibold'> {item.volumeInfo?.subtitle}</span></p>
