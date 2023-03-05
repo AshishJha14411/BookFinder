@@ -25,13 +25,13 @@ const Navbar = () => {
  
     return (
         <div className='p-8 bg-[#C38370]'>
-            <nav className='flex flex-row justify-between'>
-                <img src={logo} alt="nav-logo" className='w-[13rem]' />
-                <div className='w-[80%] flex flex-row justify-around'>
-                    <h3 className='pr-[2%] font-semibold text-lg pt-2 text-[#A45C40] cursor-pointer' onClick={handleReset}>Home</h3>
-                    <h3 className='pr-[20%] font-semibold text-lg pt-2 text-[#A45C40] cursor-pointer' onClick={handleIDReset}>BookList</h3>
+            <nav className='flex flex-col lg:flex-row lg:justify-center items-center'>
+                <img src={logo} alt="nav-logo" className='w-[13rem] xl:w-[15rem] xl:h-[4rem] h-[5rem] ' />
+                <div className='w-[80%] flex flex-col text-center lg:flex-row lg:justify-center items-center mb-9 '>
+                    <h3 className='pr-[5%] font-semibold lg:pl-[3rem] text-lg pt-2 text-[#A45C40] cursor-pointer' onClick={handleReset}>Home</h3>
+                    <h3 className='pr-[5%] font-semibold text-lg pt-2 lg:mb-0 mb-8 text-[#A45C40] cursor-pointer' onClick={handleIDReset}>BookList</h3>
                     <input
-                        className='w-[70%] h-[3rem] outline-none p-4'
+                        className='w-[100%] lg:mb-0 lg: mr-4 mb-7 h-[3rem] outline-none p-4'
                         placeholder="Enter the Book you want to search for"
                         value={query}
                         onChange={e => {
@@ -43,7 +43,7 @@ const Navbar = () => {
                         setBookId("")
                         setShowHome(false)
                     }}
-                        className='ml-[2rem] py-3 transition-all text-[#F6EEE0] font-bold rounded-lg ease-in-out delay-150 px-8 hover:bg-[#b57351] bg-[#A45C40]'
+                        className='py-3 transition-all text-[#F6EEE0] font-bold rounded-lg ease-in-out delay-150 px-8 hover:bg-[#b57351] bg-[#A45C40]'
                     >Search</button>
                 </div>
             </nav>
